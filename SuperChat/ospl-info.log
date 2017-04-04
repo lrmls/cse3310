@@ -1,0 +1,1470 @@
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : spliced 7f9afd1f9700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490579152.015821301
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : spliced 7f9afd1f9700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490579152.028243127
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : spliced 7f9afd1f9700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490579152.028358327
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : spliced 7f9afd1f9700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490579152.028618767
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : ddsi2 7f9afa9e9700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490579152.044488395
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:52 CDT 2017
+Description : The durability service can by identified by ID: 465587755
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : durability 7f9afad7d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490579152.945088950
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:45:59 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : durability 7f9afad7d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490579159.965041908
+========================================================================================
+Report      : INFO
+Date        : Sun Mar 26 20:47:14 CDT 2017
+Description : Termination request (signal 2) received from PID 20611 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <20611>
+Thread      : signalHandler 7f9afb669700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490579234.269149748
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : spliced 7f99be78b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490637834.104570161
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : spliced 7f99be78b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490637834.116928756
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : spliced 7f99be78b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490637834.117242401
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : spliced 7f99be78b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490637834.117532113
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : ddsi2 7f99bc1eb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490637834.133074371
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:03:54 CDT 2017
+Description : The durability service can by identified by ID: 381278005
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : durability 7f99bc30e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490637834.940023587
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:04:01 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : durability 7f99bc30e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490637841.960560287
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:04:31 CDT 2017
+Description : Termination request (signal 2) received from PID 16986 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <16986>
+Thread      : signalHandler 7f99bcbfa700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490637871.508834598
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : spliced 7f1e96440700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490638864.881454675
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : spliced 7f1e96440700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490638864.892451628
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : spliced 7f1e96440700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490638864.892573574
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : spliced 7f1e96440700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638864.892876501
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : ddsi2 7f1e94120700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638864.902414284
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:04 CDT 2017
+Description : The durability service can by identified by ID: 2051060787
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : durability 7f1e94221700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490638864.909207879
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:11 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : durability 7f1e94221700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638871.931152162
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : spliced 7f9ab2f22700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490638885.385135226
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : spliced 7f9ab2f22700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490638885.388461789
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : spliced 7f9ab2f22700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490638885.388548352
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : spliced 7f9ab2f22700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638885.388814283
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : ddsi2 7f9ab0733700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638885.395339807
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:25 CDT 2017
+Description : The durability service can by identified by ID: 228656735
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : durability 7f9ab0aa5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490638885.404188550
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:32 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : durability 7f9ab0aa5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638892.921024619
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:52 CDT 2017
+Description : Termination request (signal 2) received from PID 17197 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17197>
+Thread      : signalHandler 7f9ab1391700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490638912.725989889
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:21:53 CDT 2017
+Description : Termination request (signal 2) received from PID 17137 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17137>
+Thread      : signalHandler 7f1e948af700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490638913.799329058
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : spliced 7fcccaece700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490638926.969357979
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : spliced 7fcccaece700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490638926.979361455
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : spliced 7fcccaece700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490638926.979511823
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : spliced 7fcccaece700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638926.979831607
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : ddsi2 7fccc86df700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638926.996554909
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:06 CDT 2017
+Description : The durability service can by identified by ID: 2052710581
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : durability 7fccc8a51700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490638926.998813931
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:14 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : durability 7fccc8a51700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638934.037098618
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : spliced 7f595eae7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490638944.192832550
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : spliced 7f595eae7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490638944.196450172
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : spliced 7f595eae7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490638944.196542014
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : spliced 7f595eae7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638944.196786577
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : ddsi2 7f595c2f8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638944.211705478
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:24 CDT 2017
+Description : The durability service can by identified by ID: 1883934937
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : durability 7f595c66a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490638944.225765828
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:31 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : durability 7f595c66a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490638951.746014707
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:46 CDT 2017
+Description : Termination request (signal 2) received from PID 17332 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17332>
+Thread      : signalHandler 7f595cf56700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490638966.557871880
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 13:22:47 CDT 2017
+Description : Termination request (signal 2) received from PID 17278 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17278>
+Thread      : signalHandler 7fccc933d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490638967.246916114
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : spliced 7f5d9f415700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490643204.102907124
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : spliced 7f5d9f415700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490643204.106025715
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : spliced 7f5d9f415700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490643204.106129192
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : spliced 7f5d9f415700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643204.106404505
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : ddsi2 7f5d9c403700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643204.127033180
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:24 CDT 2017
+Description : The durability service can by identified by ID: 1341205451
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : durability 7f5d9c797700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490643204.436496571
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:31 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : durability 7f5d9c797700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643211.448541740
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:33:44 CDT 2017
+Description : Termination request (signal 2) received from PID 17852 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17852>
+Thread      : signalHandler 7f5d9d083700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490643224.856446054
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : spliced 7f84bfb18700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490643304.850666095
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : spliced 7f84bfb18700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490643304.857073640
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : spliced 7f84bfb18700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490643304.857216127
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : spliced 7f84bfb18700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643304.864102593
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : ddsi2 7f84bcb28700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643304.874752497
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:04 CDT 2017
+Description : The durability service can by identified by ID: 1218924939
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : durability 7f84bce9a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490643304.882498736
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:35:08 CDT 2017
+Description : Termination request (signal 2) received from PID 17951 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <17951>
+Thread      : signalHandler 7f84bd786700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490643308.386767012
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : spliced 7f2f655eb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490643442.913217594
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : spliced 7f2f655eb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490643442.924370767
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : spliced 7f2f655eb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490643442.924524623
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : spliced 7f2f655eb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643442.924826401
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : ddsi2 7f2f625fb700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643442.939212297
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:22 CDT 2017
+Description : The durability service can by identified by ID: 1589066210
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : durability 7f2f6296d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490643442.948183793
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:37:27 CDT 2017
+Description : Termination request (signal 2) received from PID 18043 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <18043>
+Thread      : signalHandler 7f2f63259700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490643447.320204122
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : spliced 7f108982a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490643724.688586108
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : spliced 7f108982a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490643724.692153238
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : spliced 7f108982a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490643724.692256252
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : spliced 7f108982a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643724.692562435
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : ddsi2 7f108683a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490643724.707138324
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:04 CDT 2017
+Description : The durability service can by identified by ID: 275715522
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : durability 7f1086bac700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490643724.709900941
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:42:07 CDT 2017
+Description : Termination request (signal 2) received from PID 18242 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <18242>
+Thread      : signalHandler 7f1087498700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490643727.558630917
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : spliced 7fab2bb46700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1490644511.323000597
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : spliced 7fab2bb46700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1490644511.326640053
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : spliced 7fab2bb46700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1490644511.326774806
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : spliced 7fab2bb46700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490644511.327079142
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : ddsi2 7fab28b56700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490644511.334299537
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:11 CDT 2017
+Description : The durability service can by identified by ID: 225409572
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : durability 7fab28ec8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1490644511.346311365
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:18 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : durability 7fab28ec8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1490644518.359148146
+========================================================================================
+Report      : INFO
+Date        : Mon Mar 27 14:55:18 CDT 2017
+Description : Termination request (signal 2) received from PID 18557 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <18557>
+Thread      : signalHandler 7fab297b4700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1490644518.727865841
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:51 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : spliced 7f80805a8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491153651.621307840
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:51 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : spliced 7f80805a8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491153651.631018628
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:51 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : spliced 7f80805a8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491153651.631134662
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:51 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : spliced 7f80805a8700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491153651.635202622
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:51 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : ddsi2 7f807d596700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491153651.650222245
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:52 CDT 2017
+Description : The durability service can by identified by ID: 885698545
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : durability 7f807d92a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491153652.356992460
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:59 CDT 2017
+Description : Termination request (signal 2) received from PID 6677 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : signalHandler 7f807e216700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1491153659.314837748
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 12:20:59 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <6677>
+Thread      : durability 7f807d92a700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491153659.372538865
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:53 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : spliced 7fdd67209700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491163493.448516504
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:53 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : spliced 7fdd67209700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491163493.455038829
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:53 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : spliced 7fdd67209700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491163493.455152176
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:53 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : spliced 7fdd67209700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491163493.455473918
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:53 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : ddsi2 7fdd641f7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491163493.474097330
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:54 CDT 2017
+Description : The durability service can by identified by ID: 1504073205
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : durability 7fdd6458b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491163494.373715638
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:04:55 CDT 2017
+Description : Exception (signal 6) occurred in process
+Node        : laramie-VirtualBox
+Process     : SuperChat <9409>
+Thread      : signalHandler 7fdd64e77700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/447/0/1491163495.665511711
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:02 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : spliced 7fb94d0ef700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491166562.766340041
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:02 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : spliced 7fb94d0ef700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491166562.774544070
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:02 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : spliced 7fb94d0ef700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491166562.774662484
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:02 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : spliced 7fb94d0ef700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491166562.774956948
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:02 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : ddsi2 7fb94a0dd700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491166562.792830728
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:03 CDT 2017
+Description : The durability service can by identified by ID: 720982438
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : durability 7fb94a471700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491166563.500873783
+========================================================================================
+Report      : INFO
+Date        : Sun Apr 02 15:56:03 CDT 2017
+Description : Exception (signal 11) occurred in process
+Node        : laramie-VirtualBox
+Process     : SuperChat <9952>
+Thread      : signalHandler 7fb94ad5d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/447/0/1491166563.999854312
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : Not installing a signal handler for the already ignored signal 13.
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : main thread 7ffff6468700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/os_signalHandlerThread/os_signalHandler.c/793/0/1491265728.139296548
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : spliced 7ffff7ff5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491265728.183593116
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : spliced 7ffff7ff5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491265728.219108872
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : spliced 7ffff7ff5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491265728.223232034
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : spliced 7ffff7ff5700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265728.224217344
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : ddsi2 7ffff4fd6700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265728.269530142
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:48 CDT 2017
+Description : The durability service can by identified by ID: 899698106
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : durability 7ffff537b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491265728.672097003
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:28:55 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2442>
+Thread      : durability 7ffff537b700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265735.685020100
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : spliced 7f021b0b7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491265764.275781753
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : spliced 7f021b0b7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491265764.279504173
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : spliced 7f021b0b7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491265764.279616609
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : spliced 7f021b0b7700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265764.279932775
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : ddsi2 7f01fbfff700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265764.287000968
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:24 CDT 2017
+Description : The durability service can by identified by ID: 1794284975
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : durability 7f0218439700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491265764.297849582
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:29:31 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : durability 7f0218439700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491265771.310299090
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:30:30 CDT 2017
+Description : Termination request (signal 2) received from PID 2501 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <2501>
+Thread      : signalHandler 7f0218d25700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1491265830.792936996
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : spliced 7f62c9d2f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491266640.049170398
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : spliced 7f62c9d2f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491266640.052845550
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : spliced 7f62c9d2f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491266640.052971351
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : spliced 7f62c9d2f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491266640.053319227
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : ddsi2 7f62c6d3f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491266640.068346544
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:00 CDT 2017
+Description : The durability service can by identified by ID: 947576936
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : durability 7f62c70b1700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491266640.076913564
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:44:07 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : durability 7f62c70b1700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491266647.089098924
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:48:52 CDT 2017
+Description : Termination request (signal 2) received from PID 2758 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <2758>
+Thread      : signalHandler 7f62c799d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1491266932.227587939
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:21 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : spliced 7f8e8b02f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491267441.185418340
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:21 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : spliced 7f8e8b02f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491267441.196476289
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:21 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : spliced 7f8e8b02f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491267441.196637607
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:21 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : spliced 7f8e8b02f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267441.196927699
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:21 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : ddsi2 7f8e6bfee700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267441.211317585
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:22 CDT 2017
+Description : The durability service can by identified by ID: 604752735
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : durability 7f8e883b1700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491267442.026161608
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:29 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : durability 7f8e883b1700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267449.050634085
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 19:57:51 CDT 2017
+Description : Termination request (signal 2) received from PID 2898 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <2898>
+Thread      : signalHandler 7f8e88c9d700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1491267471.613652078
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : u_domainNew:Database allocated on heap
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : spliced 7f08be67f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1491267673.773849072
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : spliced 7f08be67f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1491267673.777747596
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : Service cmsoap disabled
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : spliced 7f08be67f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1491267673.777867147
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : spliced 7f08be67f700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267673.778246697
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : ddsi2 7f08b762e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267673.785357141
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:13 CDT 2017
+Description : The durability service can by identified by ID: 1141617682
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : durability 7f08b79a0700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1491267673.793131975
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:20 CDT 2017
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : durability 7f08b79a0700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1491267680.819920048
+========================================================================================
+Report      : INFO
+Date        : Mon Apr 03 20:01:30 CDT 2017
+Description : Termination request (signal 2) received from PID 3018 (self), UID 1000
+Node        : laramie-VirtualBox
+Process     : SuperChat <3018>
+Thread      : signalHandler 7f08b7fff700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/signalHandlerThread/os_signalHandler.c/503/0/1491267690.606066346
