@@ -5,6 +5,7 @@
 
 
 #include "globals.h"
+//*************************message_buffer Implementation******************
        //constructor
 message_buffer::message_buffer(){count=0; head=NULL;}
 
@@ -47,3 +48,38 @@ struct message message_buffer::remove(){
 
   return outgoing; 
 }
+
+//***********************************user_list Implementation**************
+   //getters
+int user_list::get_num_users(){return num_users;}
+struct user user_list::get_user(int index){ return users[index] ;}
+
+void user_list::add(struct user inc){
+    //add a user to the list when you recieve a heartbeat, if not already in list
+   if(num_users == 0){ users[0]=inc;}
+   if(num_users == 13){/*add to user waiting queue*/ return;}
+   else{
+      int i;
+      for(i=0; i<num_users-1; i++){
+           if(users[i].uuid == inc.uuid){/*updated timer*/ return;}
+      }
+      users[i]=inc; num_users++;
+   }
+}
+
+void user_list::remove(unsigned long long id){
+   //remove user form the array. shuffle array to fill in whole
+
+   for(int i=0; i<num_users; i++){
+       //remove and adjust
+       if(users[i].uuid == id){
+          for(int j=i; j<num_users-1; j++){
+             users[j] = users[j+1];
+          }
+          num_users--;
+          return;
+       }
+     
+   }
+}
+

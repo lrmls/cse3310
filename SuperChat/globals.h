@@ -10,13 +10,15 @@
 #include "bin/ccpp_SuperChat.h"
 using namespace SuperChat;
 
-/*********buffer class definitions & implementaion*/
-       //message buffer linked list node
+                /*buffer class definitions & implementaion*/
+//**********message buffer linked list node
+
 struct m_queue{
    struct message content;
    struct m_queue* next;
  };
-       //message buffer class
+
+//********message buffer class
 class message_buffer{
 private:
    int count;
@@ -28,5 +30,17 @@ public:
    struct message remove();
    struct m_queue* get_head();
 };
-       
+
+//**********user list class
+class user_list{
+private:
+   int num_users;
+   struct user users[13];
+
+public:
+   int get_num_users();
+   struct user get_user(int);
+   void add(struct user);
+   void remove(unsigned long long);
+};
 #endif

@@ -15,6 +15,14 @@
 
 extern class message_buffer MESSAGE_BUFFER_OUT;
 extern class message_buffer MESSAGE_BUFFER_IN;
+extern class user_list USERS;
+extern pthread_mutex_t mutex_in;
+extern pthread_mutex_t mutex_out;
+extern pthread_mutex_t mutex_userlist;
+extern pthread_mutex_t mutex_local;
+extern struct user local;
+
+
 /* This code is derived from the PrismTech HelloWorld examples
    created by Jimmie Davis, modified by Laramie DeBaun
  */
@@ -297,14 +305,15 @@ void* OSPL_main(void* null)
   int seconds = 0;
 
   // the main loop
-  for (;!exit_flag;)
+  for (;!exit_flag;) 
   {
     // send out each topic according to the rules of superchat
     // first is chatroom
     {
+    //********************************OUTGOING DATA**********************/
       if (seconds%60 == 0)
       {
-        // once a minute change the chatroom name
+        // once a minute change the chatroom name wip
         chatroom messageInstance;
         messageInstance.chatroom_idx = 1;
         if ( seconds%5 == 0 )
@@ -318,31 +327,29 @@ void* OSPL_main(void* null)
         chatRoom.send ( messageInstance );
       }
     }
-    // user topic
+    // user topic outgoing heartbeat
     {
-      user messageInstance;
-     //wip link to global uuid.nick initiated in bridge.c
-      messageInstance.uuid = 123;
-      strncpy ( messageInstance.nick, "Donny", sizeof ( messageInstance.nick ) );
-      messageInstance.chatroom_idx = 0;  // public
       if (seconds%2 == 0) 
       {
          // 2.0 is less than 2.5, so this is still compliant
-         User.send ( messageInstance );
+         pthread_mutex_lock(&mutex_local);
+            User.send ( local );
+         pthread_mutex_unlock(&mutex_local);
       }
     }
     // message topic; outgoing message wip
     {
       if (seconds%15 == 0)
       {
-        
-        message messageInstance = MESSAGE_BUFFER_OUT.remove();
+        pthread_mutex_lock(&mutex_out);
+          message messageInstance = MESSAGE_BUFFER_OUT.remove();
+        pthread_mutex_unlock(&mutex_out);
         if(messageInstance.chatroom_idx != 9999){//wip sentinel for if buffer is empty
            Message.send ( messageInstance );           
         }
       }
     }
-
+    /*********************************INCOMING DATA*********************/
     // handle any input coming in
     {
       //chatroom name input message
@@ -360,8 +367,11 @@ void* OSPL_main(void* null)
       User.recv ( &List );
       for (unsigned int i=0; i<List.size ();i++)
       {
-         std::cout << "recieved user " << List[i].nick <<
+         if(List[i].uuid != local.uuid){ //ignore own heartbeat
+             std::cout << "recieved user " << List[i].nick <<
                       " chatroom index " << List[i].chatroom_idx << '\n';
+         }
+         USERS.add(List[i]);
       }
     } 
     {
@@ -370,11 +380,13 @@ void* OSPL_main(void* null)
       Message.recv ( &List );
       for (unsigned int i=0; i<List.size ();i++)
       {
-         /*if(list[i].uuid != localuser.uuid){  wip. ignore own outgoing*/
+         if(List[i].uuid != local.uuid){  //wip. ignore own outgoing
             std::cout << "recieved user " << List[i].message <<
                          " chatroom index " << List[i].chatroom_idx << '\n';
-            MESSAGE_BUFFER_IN.add(List[i]);
-         //}
+            pthread_mutex_lock(&mutex_in);
+              MESSAGE_BUFFER_IN.add(List[i]);
+            pthread_mutex_unlock(&mutex_in);
+         }
       }
     } 
     seconds++;
