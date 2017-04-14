@@ -316,15 +316,8 @@ void* OSPL_main(void* null)
         // once a minute change the chatroom name wip
         chatroom messageInstance;
         messageInstance.chatroom_idx = 1;
-        if ( seconds%5 == 0 )
-        {
-          strncpy ( messageInstance.chatroom_name, "The pleasures", sizeof ( messageInstance.chatroom_name ) );
-        }
-        else
-        {
-          strncpy ( messageInstance.chatroom_name, "The !pleasures", sizeof ( messageInstance.chatroom_name ) );
-        }
-        chatRoom.send ( messageInstance );
+        
+        //chatRoom.send ( messageInstance );
       }
     }
     // user topic outgoing heartbeat
@@ -335,19 +328,17 @@ void* OSPL_main(void* null)
          pthread_mutex_lock(&mutex_local);
             User.send ( local );
          pthread_mutex_unlock(&mutex_local);
+         USERS.update(); //update timers every 2 seconds for userlist
       }
     }
-    // message topic; outgoing message wip
-    {
-      if (seconds%15 == 0)
-      {
+    // message topic; outgoing message 
+    {    //takes message from buffer every second
         pthread_mutex_lock(&mutex_out);
           message messageInstance = MESSAGE_BUFFER_OUT.remove();
         pthread_mutex_unlock(&mutex_out);
         if(messageInstance.chatroom_idx != 9999){//wip sentinel for if buffer is empty
            Message.send ( messageInstance );           
         }
-      }
     }
     /*********************************INCOMING DATA*********************/
     // handle any input coming in
@@ -368,10 +359,8 @@ void* OSPL_main(void* null)
       for (unsigned int i=0; i<List.size ();i++)
       {
          if(List[i].uuid != local.uuid){ //ignore own heartbeat
-             std::cout << "recieved user " << List[i].nick <<
-                      " chatroom index " << List[i].chatroom_idx << '\n';
+            USERS.add(List[i]);
          }
-         USERS.add(List[i]);
       }
     } 
     {
@@ -381,8 +370,6 @@ void* OSPL_main(void* null)
       for (unsigned int i=0; i<List.size ();i++)
       {
          if(List[i].uuid != local.uuid){  //wip. ignore own outgoing
-            std::cout << "recieved user " << List[i].message <<
-                         " chatroom index " << List[i].chatroom_idx << '\n';
             pthread_mutex_lock(&mutex_in);
               MESSAGE_BUFFER_IN.add(List[i]);
             pthread_mutex_unlock(&mutex_in);

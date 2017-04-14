@@ -18,14 +18,15 @@ ${FILES_GENERATED_FROM_THE_IDL_BY_IDLPP}:./idl/SuperChat.idl
 SRC_FILES= src/DDSEntityManager.cpp src/CheckStatus.cpp
 
 
-bin/SuperChat: ${FILES_GENERATED_FROM_THE_IDL_BY_IDLPP} ./src/SuperChat.cpp ${SRC_FILES} globals.h globals.cpp
-	g++ ${CXX_FLAGS} -o ./bin/SuperChat ./src/SuperChat.cpp ./bridge.cpp ./globals.cpp\
+bin/SuperChat: ${FILES_GENERATED_FROM_THE_IDL_BY_IDLPP} ./src/SuperChat.cpp ${SRC_FILES} \
+		bridge.cpp globals.h globals.cpp gui.c
+	g++ ${CXX_FLAGS} -o ./bin/SuperChat ./src/SuperChat.cpp ./bridge.cpp ./globals.cpp gui.c\
                -I./src/ -I./include -I./bin \
                -I${OSPL_HOME}/include/dcps/C++/SACPP/ \
                ${SRC_FILES} \
                ${FILES_GENERATED_FROM_THE_IDL_BY_IDLPP} \
                ${COMMON_LIBS} \
-              # -lncurses
-
+		-lform -lncurses -lmenu
+              
 clean:
 	-rm -f ./bin/SuperChat ${FILES_GENERATED_FROM_THE_IDL_BY_IDLPP}

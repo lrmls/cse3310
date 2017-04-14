@@ -12,11 +12,10 @@ using namespace SuperChat;
 
                 /*buffer class definitions & implementaion*/
 //**********message buffer linked list node
-
 struct m_queue{
    struct message content;
    struct m_queue* next;
- };
+};
 
 //********message buffer class
 class message_buffer{
@@ -32,15 +31,21 @@ public:
 };
 
 //**********user list class
+struct user_time{
+   struct user person;
+   int timer;
+};
+
 class user_list{
 private:
    int num_users;
-   struct user users[13];
+   struct user_time users[13];
 
 public:
    int get_num_users();
    struct user get_user(int);
    void add(struct user);
    void remove(unsigned long long);
+   void update();
 };
 #endif

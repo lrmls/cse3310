@@ -12,5 +12,6 @@ This is an example program to help with the semester project
 Laramie:
 make from within /SuperChat
 bridge.cpp is main
+gui.c is the ncurses gui
 globals.h , globals.cpp contain my classes that hold the messages as a linked list buffer while they wait to be accessed by wither ospl or ncurses
 executable ./bin/SuperChat from within /SuperChat

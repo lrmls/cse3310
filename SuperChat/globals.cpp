@@ -11,8 +11,8 @@ message_buffer::message_buffer(){count=0; head=NULL;}
 
        //getter for message queue
 struct m_queue* message_buffer::get_head(){ return head; }
-       //add a message to the buffer tail
-
+       
+      //add a message to the buffer tail
 void message_buffer::add(struct message inc){
    //content=idl defined message struct; message = string message 
    //copy incoming message into new node 
@@ -52,34 +52,41 @@ struct message message_buffer::remove(){
 //***********************************user_list Implementation**************
    //getters
 int user_list::get_num_users(){return num_users;}
-struct user user_list::get_user(int index){ return users[index] ;}
+struct user user_list::get_user(int index){ return users[index].person ;}
 
 void user_list::add(struct user inc){
-    //add a user to the list when you recieve a heartbeat, if not already in list
-   if(num_users == 0){ users[0]=inc;}
-   if(num_users == 13){/*add to user waiting queue*/ return;}
+     //add a user to the list when you recieve a heartbeat, if not already in list
+   if(num_users == 0){ users[0].person=inc; num_users++;}
+   else if(num_users == 13){/*wip add to user waiting queue, currently drops user*/ return;}
    else{
       int i;
-      for(i=0; i<num_users-1; i++){
-           if(users[i].uuid == inc.uuid){/*updated timer*/ return;}
+      for(i=0; i<num_users; i++){
+           if(users[i].person.uuid == inc.uuid){users[i].timer=0; return;}
       }
-      users[i]=inc; num_users++;
+      users[i].person=inc; num_users++;
    }
 }
 
 void user_list::remove(unsigned long long id){
-   //remove user form the array. shuffle array to fill in whole
+   //remove user form the array. shuffle array to fill in hole
 
    for(int i=0; i<num_users; i++){
        //remove and adjust
-       if(users[i].uuid == id){
+       if(users[i].person.uuid == id){
           for(int j=i; j<num_users-1; j++){
-             users[j] = users[j+1];
+             users[j].person = users[j+1].person;
           }
           num_users--;
           return;
-       }
-     
+       }     
    }
 }
 
+void user_list::update(){
+   //update all current users timers in userlist by 2 seconds when we send a heartbeat
+
+   for(int i=0; i<num_users; i++){   //remaining users get shuffled back when remove, reprocess current index
+      if(users[i].timer > 5){ remove(users[i].person.uuid); num_users--; i--;}
+      else{users[i].timer +=2;}
+   }
+}
