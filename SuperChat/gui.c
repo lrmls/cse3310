@@ -99,7 +99,7 @@ void print_in_right(WINDOW *win, int starty, int startx, int width, char *string
 //new fx
 void send_message(char* );
 void update_chat_display(struct message, int*, char**);
-
+void recieve_message();
 
 void* NCURSES_main(void* null)
 {	ITEM **items_rooms, **items_users, **items_msgs;
@@ -279,8 +279,12 @@ void* NCURSES_main(void* null)
 		   pthread_mutex_unlock(&mutex_local);
 		   form_driver(my_form, REQ_BEG_FIELD);
 		       /* Loop through to get user chat input */
-		   while((ch = wgetch(my_form_win)) != KEY_F(1))
+		   while( ( MESSAGE_BUFFER_IN.get_count() != 0 ) || ((ch = wgetch(my_form_win)) != KEY_F(1)) )
 		   {	
+                      if(MESSAGE_BUFFER_IN.get_count()!=0){ 
+			  recieve_message(); //modify this function		       
+                          continue; //do not remove
+		      }
 		      switch(ch)
 		      {	   case KEY_BACKSPACE:		//working backspace for typing
 			      form_driver(my_form, REQ_PREV_CHAR);
@@ -421,6 +425,17 @@ void send_message(char* msg){
       pthread_mutex_lock(&mutex_out);
 	 MESSAGE_BUFFER_OUT.add(test);
       pthread_mutex_unlock(&mutex_out);
+}
+
+void recieve_message(){
+ 
+   pthread_mutex_lock(&mutex_in);
+     struct message incoming = MESSAGE_BUFFER_IN.remove();
+   pthread_mutex_unlock(&mutex_in);
+  //extract data from message IF chatroomidx==local.chatroomidx
+   pthread_mutex_lock(&mutex_out);  // for testing, replace with your code
+      MESSAGE_BUFFER_OUT.add(incoming);
+   pthread_mutex_unlock(&mutex_out);
 }
 
 void update_chat_display(struct message msg, int* n_msgs, char** msgs_list ){

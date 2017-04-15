@@ -333,10 +333,10 @@ void* OSPL_main(void* null)
     }
     // message topic; outgoing message 
     {    //takes message from buffer every second
-        pthread_mutex_lock(&mutex_out);
-          message messageInstance = MESSAGE_BUFFER_OUT.remove();
-        pthread_mutex_unlock(&mutex_out);
-        if(messageInstance.chatroom_idx != 9999){//wip sentinel for if buffer is empty
+        if(MESSAGE_BUFFER_OUT.get_count() != 0){   
+	   pthread_mutex_lock(&mutex_out);
+             message messageInstance = MESSAGE_BUFFER_OUT.remove();
+           pthread_mutex_unlock(&mutex_out);
            Message.send ( messageInstance );           
         }
     }

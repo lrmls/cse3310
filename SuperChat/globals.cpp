@@ -9,9 +9,10 @@
        //constructor
 message_buffer::message_buffer(){count=0; head=NULL;}
 
-       //getter for message queue
+       //getter for message queue & count
 struct m_queue* message_buffer::get_head(){ return head; }
-       
+int message_buffer::get_count(){return count;}
+
       //add a message to the buffer tail
 void message_buffer::add(struct message inc){
    //content=idl defined message struct; message = string message 
@@ -36,7 +37,7 @@ struct message message_buffer::remove(){
    //copy message from buffer head into idl defined message struct
    
    struct message outgoing; //wip
-   if(count == 0){ outgoing.chatroom_idx = 9999; return outgoing; }
+   if(count == 0){ printf("ERROR: removing from empty storage\n"); exit(1); }
    
    strcpy(outgoing.message, head->content.message);
    outgoing.uuid         = head->content.uuid;

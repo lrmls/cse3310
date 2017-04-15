@@ -28,6 +28,7 @@ public:
    void add(struct message);
    struct message remove();
    struct m_queue* get_head();
+   int get_count();
 };
 
 //**********user list class

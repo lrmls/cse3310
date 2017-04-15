@@ -52,10 +52,17 @@ int main(){
    pthread_join(ncurses_thr, NULL);
    
    //test contents of a message_buffer post execution, change out/in as desired
-   struct m_queue* temp = MESSAGE_BUFFER_OUT.get_head(); 
-   while(temp != NULL){
-      printf("        %s\n",temp->content.message);
-      temp = temp->next;
+   struct m_queue* tempin = MESSAGE_BUFFER_IN.get_head(); 
+   struct m_queue* tempout = MESSAGE_BUFFER_OUT.get_head(); 
+   printf("BUFFER_IN contents:\n");
+   while(tempin != NULL){
+      printf("       Room %u: %s\n",tempin->content.chatroom_idx, tempin->content.message);
+      tempin = tempin->next;
+   }
+    printf("BUFFER_OUT contents:\n");
+   while(tempout != NULL){
+      printf("       Room %u: %s\n",tempout->content.chatroom_idx, tempout->content.message);
+      tempout = tempout->next;
    }
    //test contents of user_list post execution
    for(int i=0; i<USERS.get_num_users(); i++){
@@ -113,25 +120,25 @@ void test_init_message_buffer_in(){
    //iniitialize message buffer to test outgoing interaction with ospl
    int i=0;
    struct message test;
-   strcpy(test.message, "cat");
+   strcpy(test.message, "Roof");
       test.uuid = i+8*i;
       test.cksum = 5*i; 
       test.chatroom_idx = i;
       MESSAGE_BUFFER_IN.add(test);
    i++;
-   strcpy(test.message, "dog");
+   strcpy(test.message, "Ceiling");
       test.uuid = i+8*i;
       test.cksum = 5*i; 
       test.chatroom_idx = i;
       MESSAGE_BUFFER_IN.add(test);
    i++;
-   strcpy(test.message, "elephant");
+   strcpy(test.message, "floor");
       test.uuid = i+8*i;
       test.cksum = 5*i; 
       test.chatroom_idx = i;
       MESSAGE_BUFFER_IN.add(test);
    i++;
-   strcpy(test.message, "horse");
+   strcpy(test.message, "Universe");
       test.uuid = i+8*i;
       test.cksum = 5*i; 
       test.chatroom_idx = i;
