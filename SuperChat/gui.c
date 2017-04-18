@@ -433,9 +433,7 @@ void recieve_message(){
      struct message incoming = MESSAGE_BUFFER_IN.remove();
    pthread_mutex_unlock(&mutex_in);
   //extract data from message IF chatroomidx==local.chatroomidx
-   pthread_mutex_lock(&mutex_out);  // for testing, replace with your code
-      MESSAGE_BUFFER_OUT.add(incoming);
-   pthread_mutex_unlock(&mutex_out);
+   
 }
 
 void update_chat_display(struct message msg, int* n_msgs, char** msgs_list ){

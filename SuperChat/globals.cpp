@@ -56,15 +56,15 @@ int user_list::get_num_users(){return num_users;}
 struct user user_list::get_user(int index){ return users[index].person ;}
 
 void user_list::add(struct user inc){
-     //add a user to the list when you recieve a heartbeat, if not already in list
-   if(num_users == 0){ users[0].person=inc; num_users++;}
+     //add a user to the list when you recieve a heartbeat, if in list reset timer
+   if(num_users == 0){ users[0].person=inc; users[0].timer=0; num_users++;}
    else if(num_users == 13){/*wip add to user waiting queue, currently drops user*/ return;}
    else{
       int i;
       for(i=0; i<num_users; i++){
            if(users[i].person.uuid == inc.uuid){users[i].timer=0; return;}
       }
-      users[i].person=inc; num_users++;
+      users[i].person=inc; users[i].timer=0; num_users++;
    }
 }
 

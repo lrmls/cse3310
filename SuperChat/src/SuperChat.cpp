@@ -328,17 +328,19 @@ void* OSPL_main(void* null)
          pthread_mutex_lock(&mutex_local);
             User.send ( local );
          pthread_mutex_unlock(&mutex_local);
-         USERS.update(); //update timers every 2 seconds for userlist
+         pthread_mutex_lock(&mutex_userlist);
+	    USERS.update(); //update timers every 2 seconds for userlist
+         pthread_mutex_unlock(&mutex_userlist);
       }
     }
     // message topic; outgoing message 
     {    //takes message from buffer every second
+	pthread_mutex_lock(&mutex_out);
         if(MESSAGE_BUFFER_OUT.get_count() != 0){   
-	   pthread_mutex_lock(&mutex_out);
              message messageInstance = MESSAGE_BUFFER_OUT.remove();
-           pthread_mutex_unlock(&mutex_out);
            Message.send ( messageInstance );           
         }
+        pthread_mutex_unlock(&mutex_out);
     }
     /*********************************INCOMING DATA*********************/
     // handle any input coming in
@@ -357,10 +359,14 @@ void* OSPL_main(void* null)
       user_list_t  List;
       User.recv ( &List );
       for (unsigned int i=0; i<List.size ();i++)
-      {
+      { 
+	 pthread_mutex_lock(&mutex_local);
          if(List[i].uuid != local.uuid){ //ignore own heartbeat
-            USERS.add(List[i]);
+           pthread_mutex_lock(&mutex_userlist);
+	     USERS.add(List[i]);
+           pthread_mutex_unlock(&mutex_userlist);
          }
+	 pthread_mutex_unlock(&mutex_local);
       }
     } 
     {
@@ -369,11 +375,13 @@ void* OSPL_main(void* null)
       Message.recv ( &List );
       for (unsigned int i=0; i<List.size ();i++)
       {
+	 pthread_mutex_lock(&mutex_local);
          if(List[i].uuid != local.uuid){  //wip. ignore own outgoing
             pthread_mutex_lock(&mutex_in);
               MESSAGE_BUFFER_IN.add(List[i]);
             pthread_mutex_unlock(&mutex_in);
          }
+	 pthread_mutex_unlock(&mutex_local);
       }
     } 
     seconds++;

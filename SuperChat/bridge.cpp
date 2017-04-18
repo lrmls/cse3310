@@ -29,6 +29,7 @@ extern void* OSPL_main(void*);
 extern void* NCURSES_main(void*);
 
 //*************************test functions
+void test_main();
 void test_init_message_buffer_out();
 void test_init_message_buffer_in();
 
@@ -42,16 +43,36 @@ int main(){
    test_init_message_buffer_in();
    test_init_message_buffer_out();
   //set up threads
-//   pthread_t ospl_thr;
+   pthread_t ospl_thr;
    pthread_t ncurses_thr;
    
-  // pthread_create(&ospl_thr, NULL, OSPL_main, NULL);
+   pthread_create(&ospl_thr, NULL, OSPL_main, NULL);
    pthread_create(&ncurses_thr, NULL, NCURSES_main, NULL);
       
-  // pthread_join(ospl_thr, NULL);
+   pthread_join(ospl_thr, NULL);
    pthread_join(ncurses_thr, NULL);
    
-   //test contents of a message_buffer post execution, change out/in as desired
+   test_main();
+  
+}
+// start from stack overflow
+// http://stackoverflow.com/questions/3247861/example-of-uuid-generation-using-boost-in-c
+
+
+/*int uuid_generation() {
+    boost::uuids::uuid uuid = boost::uuids::random_generator()();
+    std::cout << uuid << std::endl;
+    long long int x;
+    // lets go old school, and copy it over
+    memcpy ( &x, &uuid, sizeof (x) );
+    std::cout << "as a number " << std::hex << x << std::endl;
+    return 0;
+}*/
+//end from stack overflow
+
+void test_main(){
+
+ //test contents of a message_buffer post execution, change out/in as desired
    struct m_queue* tempin = MESSAGE_BUFFER_IN.get_head(); 
    struct m_queue* tempout = MESSAGE_BUFFER_OUT.get_head(); 
    printf("BUFFER_IN contents:\n");
@@ -71,21 +92,6 @@ int main(){
 
    printf("end chatroom idx=%d\n", local.chatroom_idx);
 }
-
-// start from stack overflow
-// http://stackoverflow.com/questions/3247861/example-of-uuid-generation-using-boost-in-c
-
-
-/*int uuid_generation() {
-    boost::uuids::uuid uuid = boost::uuids::random_generator()();
-    std::cout << uuid << std::endl;
-    long long int x;
-    // lets go old school, and copy it over
-    memcpy ( &x, &uuid, sizeof (x) );
-    std::cout << "as a number " << std::hex << x << std::endl;
-    return 0;
-}*/
-//end from stack overflow
 
 void test_init_message_buffer_out(){
    //iniitialize message buffer to test outgoing interaction with ospl
