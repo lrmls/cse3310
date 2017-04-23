@@ -78,24 +78,19 @@ char *list_user_room[] = {
                   };
 
 
-//I put a number of spaces almost equal to the msg size instead of reallocating based on the msg input size
-//Before, since ther was only 1 space (" "), it was only displaying 1 character of the entire msg
-char list_msgs[10][155] = {
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-"                                                                                                                                                       ",
-};
-ITEM **items_msgs, **items_users;
-MENU *menu_msgs, *menu_users;
-WINDOW *menu_msgs_win, *menu_users_win;
-int list_msgs_count, max_msgs, max_users;
+char *list_msgs[] = {
+                        "",
+                        "",
+                        "",
+                        "",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"asdf",
+                        (char *)NULL,
+                  };
 
 
 void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string, chtype color);
@@ -103,25 +98,18 @@ void print_in_left(WINDOW *win, int starty, int startx, int width, char *string,
 void print_in_right(WINDOW *win, int starty, int startx, int width, char *string, chtype color);
 //new fx
 void send_message(char* );
+void update_chat_display(struct message, int*, char**);
 void recieve_message();
-void update_msgs_list(char*);
-void erase_msgs_menu();
-void draw_msgs_menu();
-void draw_users_menu();
-void erase_users_menu();
-void update_users_list();
 
 void* NCURSES_main(void* null)
-{	ITEM **items_rooms ;
+{	ITEM **items_rooms, **items_users, **items_msgs;
 	FIELD *field[2];
 	FORM  *my_form;				
-	MENU *menu_rooms;
+	MENU *menu_rooms, *menu_users, *menu_msgs;
 	char msg[144];
-        WINDOW *menu_rooms_win, *my_form_win;
-        int n_choices, i, c, ch, rows, cols;
-    	
-        max_msgs= ARRAY_SIZE(list_msgs);
-       max_users = ARRAY_SIZE(list_users);
+        WINDOW *menu_rooms_win, *menu_users_win, *my_form_win, *menu_msgs_win;
+        int n_choices, n_users, n_msgs, i, c, ch, rows, cols;
+	
 	/* Initialize curses */
 	initscr();
 	start_color();
@@ -139,17 +127,17 @@ void* NCURSES_main(void* null)
 	
 
 	/* Create users items */
-	items_users = (ITEM **)calloc(max_users, sizeof(ITEM *));
-	for(i = 0; i < max_users; ++i)
+	n_users = ARRAY_SIZE(list_users);
+	items_users = (ITEM **)calloc(n_users, sizeof(ITEM *));
+	for(i = 0; i < n_users; ++i)
                 items_users[i] = new_item(list_users[i], list_user_room[i]);
 
-	/* Msgs items */
-	items_msgs = (ITEM **)calloc(max_msgs+1, sizeof(ITEM *));
-	for(i = 0; i < max_msgs; ++i){
+	/* Create menu is displayed as messages in chatroom msgout */
+	n_msgs = ARRAY_SIZE(list_msgs);
+	items_msgs = (ITEM **)calloc(n_msgs, sizeof(ITEM *));
+	for(i = 0; i < n_msgs; ++i){
             items_msgs[i] = new_item(list_msgs[i], ""); 
 	}
-        items_msgs[max_msgs]= (ITEM*)NULL;
-
 	/* Create menus */
 	menu_rooms = new_menu((ITEM **)items_rooms);
 	
@@ -182,6 +170,12 @@ void* NCURSES_main(void* null)
         set_menu_mark(menu_rooms, " -> ");
 
 
+	/*Messages "Menu"*/
+	set_menu_win(menu_msgs, menu_msgs_win);
+	set_menu_sub(menu_msgs, derwin(menu_msgs_win, 0, 0, 3, 1));
+	
+	
+
 	/* Print a border around the room window and print a title */
         box(menu_rooms_win, 0, 0);
 	print_in_left(menu_rooms_win, 1, 0, 40, "Room Name", COLOR_PAIR(2));
@@ -197,20 +191,15 @@ void* NCURSES_main(void* null)
 	mvwaddch(menu_users_win, 2, 0, ACS_LTEE);
 	mvwhline(menu_users_win, 2, 1, ACS_HLINE, 28);
 	mvwaddch(menu_users_win, 2, 29, ACS_RTEE);
-
-	//set messages window
-        set_menu_win(menu_msgs, menu_msgs_win);
-        set_menu_sub(menu_msgs, derwin(menu_msgs_win, 0, 0, 3, 1));
-        menu_driver(menu_msgs, REQ_TOGGLE_ITEM);
-        mvwaddch(menu_msgs_win, 2, 0, ACS_LTEE);
-        mvwhline(menu_msgs_win, 2, 1, ACS_HLINE, 144);
-        mvwaddch(menu_msgs_win, 2, 145, ACS_RTEE);
-
 	
 	/*Messages box*/
 	box(menu_msgs_win, 0, 0);
 	
 	
+	mvwaddch(menu_msgs_win, 2, 0, ACS_LTEE);
+	mvwhline(menu_msgs_win, 2, 1, ACS_HLINE, 158);
+	mvwaddch(menu_msgs_win, 2, 160, ACS_RTEE);
+
 
 
 	/* Initialize the fields */
@@ -244,10 +233,9 @@ void* NCURSES_main(void* null)
 	/* Post the menus */
 	post_menu(menu_rooms);
 	post_menu(menu_users);
-	post_menu(menu_msgs);
+	
 	wrefresh(menu_rooms_win);
 	wrefresh(menu_users_win);
-	wrefresh(menu_msgs_win);
 		
 	/*Post Form*/
 	post_form(my_form);
@@ -255,6 +243,8 @@ void* NCURSES_main(void* null)
 
 
 	attron(COLOR_PAIR(1));
+	//mvprintw(LINES - 2, 0, "Use PageUp and PageDown to scoll down or up a page of items");
+	//vprintw(LINES - 1, 0, "Arrow Keys to navigate (F1 to Exit)");
 	attroff(COLOR_PAIR(2));
 	refresh();
 	
@@ -262,7 +252,6 @@ void* NCURSES_main(void* null)
 		//execute
 	/*Loop for Menu Selection*/
 	i=0;
-	list_msgs_count =0;
 	while((c = wgetch(menu_rooms_win)) != KEY_F(1))
 	{       
 	   switch(c)
@@ -290,13 +279,12 @@ void* NCURSES_main(void* null)
 		   pthread_mutex_unlock(&mutex_local);
 		   form_driver(my_form, REQ_BEG_FIELD);
 		       /* Loop through to get user chat input */
-		   while( (MESSAGE_BUFFER_IN.get_count()!=0) || ((ch = wgetch(my_form_win)) != KEY_F(1)) )
+		   while( ( MESSAGE_BUFFER_IN.get_count() != 0 ) || ((ch = wgetch(my_form_win)) != KEY_F(1)) )
 		   {	
-		           if(MESSAGE_BUFFER_IN.get_count()!=0){ 
-		            recieve_message();
-		            continue;
-		           }
-	            
+                      if(MESSAGE_BUFFER_IN.get_count()!=0){ 
+			  recieve_message(); //modify this function		       
+                          continue; //do not remove
+		      }
 		      switch(ch)
 		      {	   case KEY_BACKSPACE:		//working backspace for typing
 			      form_driver(my_form, REQ_PREV_CHAR);
@@ -305,22 +293,10 @@ void* NCURSES_main(void* null)
      			   case 10:		//send message on ENTER	
 			      form_driver(my_form, REQ_VALIDATION);
 			      snprintf(msg, 144, "%s", field_buffer(field[0], 0));
-	
-			      //get local nick and format message
-			      pthread_mutex_lock(&mutex_local);
-			      char buff[160];
-			      strcpy(buff, local.nick);			
-			      strcat(buff, ": ");
-			      strcat(buff, msg);	     	   
-			      pthread_mutex_unlock(&mutex_local);
-		              //update list_msgs and menu	
-			      erase_msgs_menu();
-			      update_msgs_list(buff);
-			      draw_msgs_menu();
-			      //send message
-			      send_message(msg);
-         		      
-			      set_field_buffer(field[0], 0, "");
+					//construct message and add to buffer_out
+			      send_message(msg);	
+			      
+         		      set_field_buffer(field[0], 0, "");
 			      wrefresh(my_form_win);
 			      break;
 			   default:   //end of inner switch statment loop
@@ -342,12 +318,10 @@ void* NCURSES_main(void* null)
 	/* Unpost and free all the memory taken up */
         unpost_menu(menu_rooms);
 	unpost_menu(menu_users);
-	//unpost_menu(menu_msgs);
+	unpost_menu(menu_msgs);
         free_menu(menu_rooms);
 	free_menu(menu_users);
-	
-        erase_msgs_menu();
-        free_menu(menu_msgs);
+	free_menu(menu_msgs);
 	
 	unpost_form(my_form);
 	free_form(my_form);
@@ -356,12 +330,12 @@ void* NCURSES_main(void* null)
         for(i = 0; i < n_choices; ++i){
                 free_item(items_rooms[i]);}
 
-	for(i = 0; i < max_users; ++i){
+	for(i = 0; i < n_users; ++i){
                 free_item(items_users[i]);}
 
-/*	for(i = 0; i < n_msgs; ++i){
+	for(i = 0; i < n_msgs; ++i){
                 free_item(items_msgs[i]);}
-*/	
+	
 	endwin();
         pthread_exit(0);
 }
@@ -435,34 +409,6 @@ void print_in_right(WINDOW *win, int starty, int startx, int width, char *string
 	refresh();
 }
 
-void recieve_message(){
-
-   char msg[160];
-   pthread_mutex_lock(&mutex_in);
-     struct message incoming = MESSAGE_BUFFER_IN.remove();
-   pthread_mutex_unlock(&mutex_in);
-   //extract data from message IF chatroomidx==local.chatroomidx
-   pthread_mutex_lock(&mutex_local);
-   pthread_mutex_lock(&mutex_userlist);
-   if(incoming.chatroom_idx == local.chatroom_idx){
-	//get user nick
-      for(int i=0; i<USERS.get_num_users(); i++){
-          if(USERS.get_user(i).uuid == incoming.uuid){
-	      strcpy(msg, USERS.get_user(i).nick);
-              break;
-	   }   
-      }
-      strcat(msg, ": ");
-      strcat(msg, incoming.message);
-      erase_msgs_menu();
-      update_msgs_list(msg);
-      draw_msgs_menu();
-   }
-   pthread_mutex_unlock(&mutex_userlist);
-   pthread_mutex_unlock(&mutex_local);
-}
-
-
 void send_message(char* msg){
  	//constructs idl defined message and adds to buffer_out
 
@@ -470,120 +416,46 @@ void send_message(char* msg){
       strcpy(test.message, msg);
       pthread_mutex_lock(&mutex_local);
 	 test.uuid = local.uuid;
-         test.chatroom_idx = local.chatroom_idx;
       pthread_mutex_unlock(&mutex_local);
-      test.cksum= 0;
-      	
+	test.cksum= 0;
+      pthread_mutex_lock(&mutex_local);
+	 test.chatroom_idx = local.chatroom_idx;
+      pthread_mutex_unlock(&mutex_local);
+		
       pthread_mutex_lock(&mutex_out);
 	 MESSAGE_BUFFER_OUT.add(test);
       pthread_mutex_unlock(&mutex_out);
 }
 
-void draw_msgs_menu(){
-        int i=0;
-        //Create menu is displayed as messages in chatroom msgout 
-
-        items_msgs = (ITEM **)calloc(max_msgs+1, sizeof(ITEM *));
-	for(i=0; i < max_msgs; ++i){
-            items_msgs[i] = new_item(list_msgs[i], "");
-        }
-        //putting NULL at end of items without putting it in the actual message array
-        items_msgs[max_msgs] = (ITEM *)NULL;
-
-        //point new items to the menu
-        set_menu_items(menu_msgs, items_msgs);
-
-        //drawing box/outline
-        set_menu_win(menu_msgs, menu_msgs_win);
-        set_menu_sub(menu_msgs, derwin(menu_msgs_win, 0, 0, 3, 1));
-        mvwaddch(menu_msgs_win, 2, 0, ACS_LTEE);
-        mvwhline(menu_msgs_win, 2, 1, ACS_HLINE, 144);
-        mvwaddch(menu_msgs_win, 2, 145, ACS_RTEE);
-        menu_driver(menu_msgs, REQ_TOGGLE_ITEM);
-        box(menu_msgs_win, 0, 0);
-
-        post_menu(menu_msgs);
-        wrefresh(menu_msgs_win);
+void recieve_message(){
+ 
+   pthread_mutex_lock(&mutex_in);
+     struct message incoming = MESSAGE_BUFFER_IN.remove();
+   pthread_mutex_unlock(&mutex_in);
+  //extract data from message IF chatroomidx==local.chatroomidx
+   
 }
 
-void update_msgs_list(char * msg){
-        int i=1;
-        //menu displaying messages is full
-        if(list_msgs_count == max_msgs)
-        {
-                //shuffle
-                for(i=1; i<max_msgs; i++)
-                {
-                        strcpy(list_msgs[i-1], list_msgs[i]);
-                }
-                strcpy(list_msgs[max_msgs-1], msg);
-        }
-        else
-        {
-                strcpy(list_msgs[list_msgs_count], msg);
-                list_msgs_count++;
-        }
-}
+void update_chat_display(struct message msg, int* n_msgs, char** msgs_list ){
+	//adds "msg.nick: msg.message" to list_msgs, iff full delete list_msgs[0], shuffle, add to end
+        //frees and unposts menu_msgs and item_msgs, recreates and reposts
+   
+    //if message_in buffer empty|| message is not for current chatroom: do nothing
+    if(msg.chatroom_idx == 9999 || msg.chatroom_idx != local.chatroom_idx){return;} 
+/*   
+    unpost_menu(menu_msgs);   
+    free_menu(menu_msgs);   
+    
+    if(*n_msgs ==0){ 
+       *n_msgs++;
+       strcpy(msgs_list, msg.message);
+
+    }    
 
 
-//unpost and frees items before updating, but does not free menu
-void erase_msgs_menu(){
-        int i=0;
 
-        unpost_menu(menu_msgs);
-        for(i = 0; i < max_msgs+1; ++i){
-                free_item(items_msgs[i]); }
-}
-
-
-void draw_users_menu(){
-
-	int i=0;
-	/* Create users items */
-	items_users = (ITEM **)calloc(max_users+1, sizeof(ITEM *));
-	for(i; i < max_users; ++i){
-		items_users[i] = new_item(list_users[i], list_user_room[i]);
-        }
-	items_users[max_users] = (ITEM *)NULL;
-	set_menu_items(menu_users, items_users);
-	menu_users_win = newwin(18, 30, 4, 60);
-	set_menu_win(menu_users, menu_users_win);
-	set_menu_sub(menu_users, derwin(menu_users_win, 0, 0, 3, 1));
-	set_menu_spacing(menu_users, 8, 1, 1); //8 sets the spacing between menu columns UPDATE?
-	set_menu_format(menu_users, 10, 1);
-	box(menu_users_win, 0, 0);
-	print_in_left(menu_users_win, 1, 0, 30, "User", COLOR_PAIR(2));
-	print_in_right(menu_users_win, 1, 0, 30, "Room", COLOR_PAIR(2));
-	mvwaddch(menu_users_win, 2, 0, ACS_LTEE);
-	mvwhline(menu_users_win, 2, 1, ACS_HLINE, 28);
-	mvwaddch(menu_users_win, 2, 29, ACS_RTEE);
-	post_menu(menu_users);
-	wrefresh(menu_users_win);
-}
-
-
-void erase_users_menu(){
-
-   int i=0;
-   unpost_menu(menu_users);
-
-   for(i = 0; i < max_users+1; ++i){
-     free_item(items_users[i]);
-   }
-}
-
-void update_users_list(){
-
-	int i=0;
-
-	pthread_mutex_lock(&mutex_userlist);
-
-	for(i;i<USERS.get_num_users();i++)
-	{
-	   strcpy(list_users[i], USERS.get_user(i).nick);
-	   strcpy(list_user_room[i], choices[USERS.get_user(i).chatroom_idx]);
-	}
-	pthread_mutex_unlock(&mutex_userlist);
-}
-
-
+    menu_msgs = new_menu((ITEM **)items_msgs);
+    set_menu_win(menu_msgs, menu_msgs_win);
+    set_menu_sub(menu_msgs, derwin(menu_msgs_win, 0, 0, 3, 1));
+    post_menu(menu_msgs);
+*/}

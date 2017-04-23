@@ -262,7 +262,6 @@ class user_data
   }
   ~user_data ()
   {
-std::cout << "deconstructor" << '\n';
     // Remove the DataWriters.
     em.deleteWriter ();
 
@@ -311,14 +310,11 @@ void* OSPL_main(void* null)
     // first is chatroom
     {
     //********************************OUTGOING DATA**********************/
-      if (seconds%60 == 0)
-      {
-        // once a minute change the chatroom name wip
-        chatroom messageInstance;
-        messageInstance.chatroom_idx = 1;
-        
-        //chatRoom.send ( messageInstance );
-      }
+      //drooping chatroom namechanegd functionality
+        // chatroom messageInstance;
+       // messageInstance.chatroom_idx = 1;
+       //chatRoom.send ( messageInstance );
+      
     }
     // user topic outgoing heartbeat
     {
@@ -345,14 +341,15 @@ void* OSPL_main(void* null)
     /*********************************INCOMING DATA*********************/
     // handle any input coming in
     {
-      //chatroom name input message
-      chatroom_list_t  List;
+      //chatroom name input message; Functionality dropped
+     /* chatroom_list_t  List;
       chatRoom.recv ( &List );
       for (unsigned int i=0; i<List.size ();i++)
       {
          std::cout << "recieved new chatroom name " << List[i].chatroom_name <<
                       " chatroom index " << List[i].chatroom_idx << '\n';
       }
+	*/
     } 
     {
       //user heartbeat
@@ -387,6 +384,5 @@ void* OSPL_main(void* null)
     seconds++;
     sleep (1);
   }
-  std::cout << "normal exit" << '\n';
   pthread_exit(0);
 }

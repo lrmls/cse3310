@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <stdio.h> 
 #include <globals.h>
+#include <ctime>
 //#include "../../boost_1_63_0/boost/uuid/uuid.hpp"      // uuid class
 //#include <boost_1_63_0/boost/uuid/uuid_generators.hpp> // generators
 //#include <boost_1_63_0/boost/uuid/uuid_io.hpp>         // streaming operators etc.
@@ -36,12 +37,13 @@ void test_init_message_buffer_in();
 
 int main(){
    //initialize local user data
+  
    strcpy(local.nick, "Default");
-   local.uuid = 1 ;
+   local.uuid = (unsigned long long)time(0) ;
    local.chatroom_idx = 0;
   
-   test_init_message_buffer_in();
-   test_init_message_buffer_out();
+//   test_init_message_buffer_in();
+  // test_init_message_buffer_out();
   //set up threads
    pthread_t ospl_thr;
    pthread_t ncurses_thr;
@@ -86,11 +88,13 @@ void test_main(){
       tempout = tempout->next;
    }
    //test contents of user_list post execution
+    printf("User List contents:\n");
    for(int i=0; i<USERS.get_num_users(); i++){
-      printf("%s\n ",USERS.get_user(i).nick);   
+      printf("user %d: %s\n " , i,USERS.get_user(i).nick);   
    }
 
    printf("end chatroom idx=%d\n", local.chatroom_idx);
+   printf("local uuid=%d\n", local.uuid);
 }
 
 void test_init_message_buffer_out(){

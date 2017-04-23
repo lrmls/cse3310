@@ -1,3 +1,10 @@
+4/23/17
+updates chatroom window sith messages
+known bugs: waits to read incoming messages until key press, consuming the key tha was pressed
+	   if approx. >3 messages waiting to be read can cause stack smash error
+	    userlist not updating properly
+
+//4/16/17
 This is the complete operational package with the ospl(opensplice) thread commented out
 top priority:
 	1) chatroom message display updates upon recieved message and sent message
