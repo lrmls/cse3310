@@ -1,0 +1,80 @@
+========================================================================================
+Report      : ERROR
+Date        : Sun Apr 23 14:38:47 CDT 2017
+Description : Exception occurred, will detach user-layer from domain.
+Node        : laramie-VirtualBox
+Process     : SuperChat <4473>
+Thread      : signalHandler 7ff1f4d3e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/u__userExceptionCallbackWrapper/u_user.c/360/0/1492976327.331024612
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:35:00 CDT 2017
+Description : 192.168.1.1: does not match an available interface
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2002>
+Thread      : ddsi2 7fb5e5b3e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_nwif.c/724/0/1493076900.861320118
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:35:00 CDT 2017
+Description : No network interface selected
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2002>
+Thread      : ddsi2 7fb5e5b3e700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_init.c/412/0/1493076900.871159363
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:35:53 CDT 2017
+Description : 192.168.1.1: does not match an available interface
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2036>
+Thread      : ddsi2 7ff3aa506700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_nwif.c/724/0/1493076953.620480976
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:35:53 CDT 2017
+Description : No network interface selected
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2036>
+Thread      : ddsi2 7ff3aa506700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_init.c/412/0/1493076953.620703079
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:39:38 CDT 2017
+Description : 192.168.1.100: does not match an available interface
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2105>
+Thread      : ddsi2 7f953b823700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_nwif.c/724/0/1493077178.157541390
+========================================================================================
+Report      : ERROR
+Date        : Mon Apr 24 18:39:38 CDT 2017
+Description : No network interface selected
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <2105>
+Thread      : ddsi2 7f953b823700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_init.c/412/0/1493077178.157661973
+========================================================================================
+Report      : ERROR
+Date        : Sat Apr 29 15:54:49 CDT 2017
+Description : 10.0.2.15: does not match an available interface
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <1850>
+Thread      : ddsi2 7fb878a56700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_nwif.c/724/0/1493499289.485113801
+========================================================================================
+Report      : ERROR
+Date        : Sat Apr 29 15:54:49 CDT 2017
+Description : No network interface selected
+
+Node        : laramie-VirtualBox
+Process     : SuperChat <1850>
+Thread      : ddsi2 7fb878a56700
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_init.c/412/0/1493499289.498373597

@@ -43,6 +43,7 @@ private:
    struct user_time users[13];
 
 public:
+   user_list();
    int get_num_users();
    struct user get_user(int);
    void add(struct user);

@@ -51,18 +51,20 @@ struct message message_buffer::remove(){
 }
 
 //***********************************user_list Implementation**************
+
+	//constructor
+user_list::user_list(){num_users = 0;}
    //getters
 int user_list::get_num_users(){return num_users;}
 struct user user_list::get_user(int index){ return users[index].person ;}
 
 void user_list::add(struct user inc){
      //add a user to the list when you recieve a heartbeat, if in list reset timer
-   if(num_users == 0){ users[0].person=inc; users[0].timer=0; num_users++;}
-   else if(num_users == 13){/*wip add to user waiting queue, currently drops user*/ return;}
+   if(num_users == 13){/*wip add to user waiting queue, currently drops user*/ return;}
    else{
       int i;
       for(i=0; i<num_users; i++){
-           if(users[i].person.uuid == inc.uuid){users[i].timer=0; return;}
+           if(users[i].person.uuid == inc.uuid){users[i].timer=0; users[i].person = inc; return;}
       }
       users[i].person=inc; users[i].timer=0; num_users++;
    }
@@ -87,7 +89,7 @@ void user_list::update(){
    //update all current users timers in userlist by 2 seconds when we send a heartbeat
 
    for(int i=0; i<num_users; i++){   //remaining users get shuffled back when remove, reprocess current index
-      if(users[i].timer > 5){ remove(users[i].person.uuid); num_users--; i--;}
+      if(users[i].timer > 5){ remove(users[i].person.uuid); i--;}
       else{users[i].timer +=2;}
    }
 }

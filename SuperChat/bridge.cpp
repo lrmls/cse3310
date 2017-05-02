@@ -17,8 +17,9 @@
 //ncurses reads from in and writes to out
 class message_buffer MESSAGE_BUFFER_OUT = message_buffer();
 class message_buffer MESSAGE_BUFFER_IN  = message_buffer();
-class user_list USERS;
+class user_list USERS = user_list();
 struct user local;
+int STOP = 0;
 //***************************mutex initialization
 pthread_mutex_t mutex_in       = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mutex_out      = PTHREAD_MUTEX_INITIALIZER;
@@ -90,7 +91,7 @@ void test_main(){
    //test contents of user_list post execution
     printf("User List contents:\n");
    for(int i=0; i<USERS.get_num_users(); i++){
-      printf("user %d: %s\n " , i,USERS.get_user(i).nick);   
+      printf("        user %d: %s\n " , i,USERS.get_user(i).nick);   
    }
 
    printf("end chatroom idx=%d\n", local.chatroom_idx);

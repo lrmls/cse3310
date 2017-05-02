@@ -21,7 +21,7 @@ extern pthread_mutex_t mutex_out;
 extern pthread_mutex_t mutex_userlist;
 extern pthread_mutex_t mutex_local;
 extern struct user local;
-
+extern int STOP;
 
 /* This code is derived from the PrismTech HelloWorld examples
    created by Jimmie Davis, modified by Laramie DeBaun
@@ -304,7 +304,7 @@ void* OSPL_main(void* null)
   int seconds = 0;
 
   // the main loop
-  for (;!exit_flag;) 
+  while (!STOP) 
   {
     // send out each topic according to the rules of superchat
     // first is chatroom
